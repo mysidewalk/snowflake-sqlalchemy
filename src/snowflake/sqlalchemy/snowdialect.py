@@ -51,6 +51,7 @@ from .custom_types import (
     _CUSTOM_DECIMAL,
     ARRAY,
     GEOGRAPHY,
+    GEOMETRY,
     OBJECT,
     TIMESTAMP_LTZ,
     TIMESTAMP_NTZ,
@@ -71,6 +72,7 @@ colspecs = {
 }
 
 ischema_names = {
+    "ARRAY": ARRAY,
     "BIGINT": BIGINT,
     "BINARY": BINARY,
     # 'BIT': BIT,
@@ -83,11 +85,13 @@ ischema_names = {
     "DECIMAL": DECIMAL,
     "DOUBLE": FLOAT,
     "FIXED": DECIMAL,
+    "GEOGRAPHY": GEOGRAPHY,
+    "GEOMETRY": GEOMETRY,
     "FLOAT": FLOAT,
     "INT": INTEGER,
     "INTEGER": INTEGER,
     "NUMBER": _CUSTOM_DECIMAL,
-    # 'OBJECT': ?
+    "OBJECT": OBJECT,
     "REAL": REAL,
     "BYTEINT": SMALLINT,
     "SMALLINT": SMALLINT,
@@ -95,16 +99,13 @@ ischema_names = {
     "TEXT": VARCHAR,
     "TIME": TIME,
     "TIMESTAMP": TIMESTAMP,
-    "TIMESTAMP_TZ": TIMESTAMP_TZ,
     "TIMESTAMP_LTZ": TIMESTAMP_LTZ,
     "TIMESTAMP_NTZ": TIMESTAMP_NTZ,
+    "TIMESTAMP_TZ": TIMESTAMP_TZ,
     "TINYINT": SMALLINT,
     "VARBINARY": BINARY,
     "VARCHAR": VARCHAR,
     "VARIANT": VARIANT,
-    "OBJECT": OBJECT,
-    "ARRAY": ARRAY,
-    "GEOGRAPHY": GEOGRAPHY,
 }
 
 

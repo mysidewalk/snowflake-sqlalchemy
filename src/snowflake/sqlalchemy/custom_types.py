@@ -33,20 +33,20 @@ class SnowflakeType(sqltypes.TypeEngine):
         return __import__("snowflake.sqlalchemy").sqlalchemy.dialect()
 
 
-class VARIANT(SnowflakeType):
-    __visit_name__ = "VARIANT"
-
-
-class OBJECT(SnowflakeType):
-    __visit_name__ = "OBJECT"
-
-
 class ARRAY(SnowflakeType):
     __visit_name__ = "ARRAY"
 
 
-class TIMESTAMP_TZ(SnowflakeType):
-    __visit_name__ = "TIMESTAMP_TZ"
+class GEOGRAPHY(SnowflakeType):
+    __visit_name__ = "GEOGRAPHY"
+
+
+class GEOMETRY(SnowflakeType):
+    __visit_name__ = "GEOMETRY"
+
+
+class OBJECT(SnowflakeType):
+    __visit_name__ = "OBJECT"
 
 
 class TIMESTAMP_LTZ(SnowflakeType):
@@ -57,8 +57,12 @@ class TIMESTAMP_NTZ(SnowflakeType):
     __visit_name__ = "TIMESTAMP_NTZ"
 
 
-class GEOGRAPHY(SnowflakeType):
-    __visit_name__ = "GEOGRAPHY"
+class TIMESTAMP_TZ(SnowflakeType):
+    __visit_name__ = "TIMESTAMP_TZ"
+
+
+class VARIANT(SnowflakeType):
+    __visit_name__ = "VARIANT"
 
 
 class _CUSTOM_Date(SnowflakeType, sqltypes.Date):
